@@ -5,7 +5,8 @@
  * Date: 31.05.2020
  * Time: 21:25
  */
-IncludeModuleLangFile(__FILE__);
+IncludeModuleLangFile($notFoundFile);
+$APPLICATION->RestartBuffer();
 ?>
 <style type="text/css">
     <?= file_get_contents(__DIR__.'/style.css'); ?>
@@ -35,3 +36,5 @@ IncludeModuleLangFile(__FILE__);
         bcontext.putImageData(idata, 0, 0);
     }
 </script>
+
+<?php die(); ?>

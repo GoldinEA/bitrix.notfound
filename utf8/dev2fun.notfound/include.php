@@ -33,7 +33,7 @@ class Base
     ];
     public static $templates = [];
 
-    public static function InitRedirects()
+    public static function InitNotFound()
     {
         global $APPLICATION;
         if (!Loader::includeModule('iblock')) {
@@ -57,7 +57,7 @@ class Base
             $APPLICATION->RestartBuffer();
 
             $template = Option::get(self::$module_id,'template','default');
-            $templates = self::getTemplatesName();
+            $templates = self::getTemplates();
             if(empty($templates[$template])) {
                 $template = 'default';
             }
@@ -88,7 +88,7 @@ class Base
                 \array_map(function($dir) use($findDirectory, &$templates){
                     $dirTemplate = $findDirectory.'/'.$dir;
                     if(empty($templates[$dir])) {
-                        $templates[$dir] = $dirTemplate;
+                        $templates[$dir] = "$dirTemplate/index.php";
                     }
                 }, $tree);
             }

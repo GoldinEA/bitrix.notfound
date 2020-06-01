@@ -5,13 +5,13 @@
  * Date: 31.05.2020
  * Time: 21:25
  */
-IncludeModuleLangFile(__FILE__);
+IncludeModuleLangFile($notFoundFile);
 ?>
 <style type="text/css">
     <?= file_get_contents(__DIR__.'/style.css'); ?>
 </style>
 
-<main>
+<div class="birdie_main">
     <svg
         viewBox="0 0 541.17206 328.45184"
         height="328.45184"
@@ -219,6 +219,6 @@ IncludeModuleLangFile(__FILE__);
 
     <p id="errorText">O-o-oh! Something broke.</p>
     <a id="errorLink" href="/">Go Back</a>
-</main>
+</div>
 </main>
 

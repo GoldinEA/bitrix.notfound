@@ -5,19 +5,20 @@
  * Date: 31.05.2020
  * Time: 21:25
  */
-IncludeModuleLangFile(__FILE__);
+IncludeModuleLangFile($notFoundFile);
+$APPLICATION->RestartBuffer();
 ?>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
-<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/SplitText.min.js"></script>
-<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MorphSVGPlugin.min.js"></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700">
+
 <style type="text/css">
     <?= file_get_contents(__DIR__.'/style.css'); ?>
 </style>
+
 <div class="container">
     <p class="textA">Page Not Found</p>
     <p class="textB">404</p>
-    <a class="textC" href="#">Go Back</a>
+    <a class="textC" href="/">Go Back</a>
     <svg class="page-not-found" viewBox="0 0 1280 1024">
         <title>Page Not Found</title>
         <g class="hide tri-dots">
@@ -336,63 +337,8 @@ IncludeModuleLangFile(__FILE__);
             <polygon points="593 168.6 659.5 244.5 497.1 255.2 593 168.6" style="fill: #f62c72"/>
             <polyline points="659.5 234.5 657.3 213.9 590.7 138 494.8 224.6 497.1 245.2 497.1 245.2 593 158.6 659.5 234.5" style="fill: #ffe029"/>
         </g>
-        <g class="hide words">
-            <text transform="translate(471.5 329.1) rotate(-2.9)" style="font-size: 40px;fill: #032c3f;font-family: Futura-CondensedMedium, Futura">P</text>
-            <text transform="translate(486.4 328.4) rotate(-2.9)" style="font-size: 40px;fill: #032c3f;font-family: Futura-CondensedMedium, Futura">A</text>
-            <text transform="translate(502.6 327.5) rotate(-2.9)" style="font-size: 40px;fill: #032c3f;font-family: Futura-CondensedMedium, Futura">G</text>
-            <text transform="matrix(1, -0.05, 0.05, 1, 521.22, 326.59)" style="font-size: 40px;fill: #032c3f;font-family: Futura-CondensedMedium, Futura">E</text>
-            <text transform="matrix(1, -0.05, 0.05, 1, 535.73, 325.85)" style="font-size: 40px;fill: #032c3f;font-family: Futura-CondensedMedium, Futura"> </text>
-            <text transform="matrix(1, -0.05, 0.05, 1, 544, 325.43)" style="font-size: 40px;fill: #032c3f;font-family: Futura-CondensedMedium, Futura">N</text>
-            <text transform="translate(562.7 324.5) rotate(-2.9)" style="font-size: 40px;fill: #032c3f;font-family: Futura-CondensedMedium, Futura">O</text>
-            <text transform="translate(582.1 323.5) rotate(-2.9)" style="font-size: 40px;fill: #032c3f;font-family: Futura-CondensedMedium, Futura">T</text>
-            <text transform="matrix(1, -0.05, 0.05, 1, 595.15, 322.83)" style="font-size: 40px;fill: #032c3f;font-family: Futura-CondensedMedium, Futura"> </text>
-            <text transform="translate(603.4 322.4) rotate(-2.9)" style="font-size: 40px;fill: #032c3f;font-family: Futura-CondensedMedium, Futura">F</text>
-            <text transform="translate(617.5 321.7) rotate(-2.9)" style="font-size: 40px;fill: #032c3f;font-family: Futura-CondensedMedium, Futura">O</text>
-            <text transform="translate(636.6 320.7) rotate(-2.9)" style="font-size: 40px;fill: #032c3f;font-family: Futura-CondensedMedium, Futura">U</text>
-            <text transform="translate(655.1 319.8) rotate(-2.9)" style="font-size: 40px;fill: #032c3f;font-family: Futura-CondensedMedium, Futura">N</text>
-            <text transform="matrix(1, -0.05, 0.05, 1, 673.8, 318.83)" style="font-size: 40px;fill: #032c3f;font-family: Futura-CondensedMedium, Futura">D</text>
-            <text transform="translate(742 682.9)" style="font-size: 60px;fill: #032c3f;font-family: Futura-CondensedMedium, Futura">GO <tspan x="69.1" y="0" style="letter-spacing: 0.0029296875em">B</tspan><tspan x="94" y="0" style="letter-spacing: -0.0068359375em">A</tspan><tspan x="118" y="0">CK</tspan></text>
-            <text transform="translate(479.2 549.5)" style="font-size: 180px;fill: #032c3f;font-family: Futura-CondensedExtraBold, Futura;font-weight: 700">4<tspan x="108.3" y="0" style="letter-spacing: -0.0009765625em">0</tspan><tspan x="216.4" y="0">4</tspan></text>
-        </g>
+        <g class="hide words"></g>
     </svg>
 </div>
 
-<script>
-    var tl = new TimelineMax(),
-        split404  = new SplitText(".textB", {type:"chars"}),
-        splitPage = new SplitText(".textA", {type:"chars"}),
-        splitBack = new SplitText(".textC", {type:"chars"});
-
-    split404.split({type:"chars"});
-    splitPage.split({type:"chars"});
-    splitBack.split({type:"chars"});
-
-    tl.set(".hide", {opacity: 0})
-        .set(".box", {scale: 0,  transformOrigin: "50% 50%"})
-        .set(".hide.big-white-circle", {scale: 0,  transformOrigin: "50% 50%"})
-        .set(".hide.bottom-triangles", {scale: 0, rotation: 720,  transformOrigin: "50% 50%"})
-
-        .to(".box", 2, {scale: 1, transformOrigin: "50% 50%", ease: Elastic.easeOut.config(1, 0.5)})
-
-        .staggerFrom(split404.chars, 1, {opacity: 0, scaleX: 0, ease: Power4.easeOut}, 0.05, "-=1")
-        .staggerTo(split404.chars, 1, {opacity: 1, scaleX: 1, ease: Power4.easeOut}, 0.05, "-=1")
-
-        .staggerFrom(splitPage.chars, 1, {opacity: 0, scaleX: 0, ease: Power4.easeOut}, 0.05, "-=1")
-        .staggerTo(splitPage.chars, 1, {opacity: 1, scaleX: 1, ease: Power4.easeOut}, 0.05, "-=1")
-
-        .staggerFrom(splitBack.chars, 1, {opacity: 0, scaleX: 0, ease: Power4.easeOut}, 0.05, "-=1.5")
-        .staggerTo(splitBack.chars, 1, {opacity: 1, scaleX: 1, ease: Power4.easeOut}, 0.05, "-=1.5")
-        .to(".hide.big-white-circle", 2, {scale: 1, opacity: 1, ease: Elastic.easeOut.config(1, 0.3)}, "-=1.45")
-        .to(".hide.spin-circles", 2, {opacity: 1}, "-=1.45")
-        .to(".hide.tri-dots", 1, {opacity: 1}, "-=1.5")
-        .to(".hide.bottom-triangles", 2, {opacity: 1, scale: 1, rotation: 0}, "-=1.5")
-        .to(".start-tri", 1, {morphSVG:".end-tri"}, "-=1.5")
-
-    // .timeScale();
-    // .seek();
-
-    // create repeating timeline for spinning circles
-    var tlSpin = new TimelineMax({repeat: -1});
-    tlSpin.set('.hide.spin-circles', {rotation: 0, transformOrigin: "50% 50%"})
-        .to('.hide.spin-circles', 3.5, {rotation: 360, ease:Linear.easeNone})
-</script>
+<?php die(); ?>

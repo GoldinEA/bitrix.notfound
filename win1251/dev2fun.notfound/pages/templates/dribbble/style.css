@@ -149,6 +149,9 @@ h1 {
     }
 }
 
+.btn_wrapper {
+    display: flex;
+}
 .btn {
     font-family: "Open Sans";
     font-weight: 400;

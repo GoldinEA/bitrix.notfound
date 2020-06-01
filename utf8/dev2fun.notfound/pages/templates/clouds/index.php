@@ -5,7 +5,8 @@
  * Date: 31.05.2020
  * Time: 21:25
  */
-IncludeModuleLangFile(__FILE__);
+IncludeModuleLangFile(__LINE__);
+$APPLICATION->RestartBuffer();
 ?>
 <style type="text/css">
     <?= file_get_contents(__DIR__.'/style.css'); ?>
@@ -31,3 +32,4 @@ IncludeModuleLangFile(__FILE__);
         <?=\Bitrix\Main\Localization\Loc::getMessage('DEV2FUN_NOTFOUND_TEMPLATE_CLOUD_TO_MAIN')?>
     </a>
 </div>
+<?php die(); ?>

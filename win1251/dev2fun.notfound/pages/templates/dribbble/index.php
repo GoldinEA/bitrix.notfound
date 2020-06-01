@@ -5,11 +5,13 @@
  * Date: 31.05.2020
  * Time: 21:25
  */
-IncludeModuleLangFile(__FILE__);
+IncludeModuleLangFile(__LINE__);
+$APPLICATION->RestartBuffer();
 ?>
 <style type="text/css">
     <?= file_get_contents(__DIR__.'/style.css'); ?>
 </style>
+
 <div class="face">
     <div class="band">
         <div class="red"></div>
@@ -22,4 +24,9 @@ IncludeModuleLangFile(__FILE__);
 </div>
 
 <h1><?=\Bitrix\Main\Localization\Loc::getMessage('DEV2FUN_NOTFOUND_TITLE')?></h1>
-<a href="/" class="btn"><?=\Bitrix\Main\Localization\Loc::getMessage('DEV2FUN_NOTFOUND_TO_MAIN')?></a>
+<div class="btn_wrapper">
+    <a href="/" class="btn">
+        <?=\Bitrix\Main\Localization\Loc::getMessage('DEV2FUN_NOTFOUND_TO_MAIN')?>
+    </a>
+</div>
+<?php die(); ?>

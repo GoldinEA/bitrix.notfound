@@ -1,44 +1,45 @@
-*, :before, :after {
+.blackhole_body  *,
+.blackhole_body :before,
+.blackhole_body :after {
     box-sizing: border-box;
 }
 
-body {
+.blackhole_body {
     display: flex;
     align-items: center;
     background: #E3F2FD;
     min-width: 275px;
     height: 100vh;
-    margin: 0 10vw;
     overflow: hidden;
     color: #138FF2;
     font-family: Roboto;
 }
 
-.wrapper {
+.blackhole_body .wrapper {
     flex-grow: 2;
     width: 40vw;
     max-width: 500px;
     margin: 0 auto;
 }
 
-h1 {
+.blackhole_body h1 {
     margin: 0;
     font-size: 6em;
     font-weight: 100;
 }
 
-p {
+.blackhole_body p {
     width: 95%;
     font-size: 1.5em;
     line-height: 1.4;
 }
 
-.buttons {
+.blackhole_body .buttons {
     white-space: nowrap;
     display: inline-block;
 }
 
-span {
+.blackhole_body span {
     display: block;
     text-transform: uppercase;
     color: #B9DDFB;
@@ -46,7 +47,7 @@ span {
     text-align: center;
 }
 
-a {
+.blackhole_body a {
     display: inline-block;
     padding: .8em 1em;
     margin-right: 1em;
@@ -61,13 +62,13 @@ a {
     overflow: hidden;
     transition: .3s;
 }
-a:hover {
+.blackhole_body a:hover {
     color: #E3F2FD;
 }
-a:hover:before {
+.blackhole_body a:hover:before {
     top: 0;
 }
-a:before {
+.blackhole_body a:before {
     content: '';
     background: #138FF2;
     height: 100%;
@@ -79,7 +80,7 @@ a:before {
     z-index: -1;
 }
 
-.space {
+.blackhole_body .space {
     width: 75px;
     height: calc(50vh + 37.5px);
     border-top-left-radius: 37.5px;
@@ -91,7 +92,7 @@ a:before {
     -webkit-transform: translateZ(0);
 }
 
-.blackhole {
+.blackhole_body .blackhole {
     border: 5px solid #1674D1;
     height: 75px;
     width: 75px;
@@ -100,7 +101,7 @@ a:before {
     top: 0;
     left: 0;
 }
-.blackhole:after {
+.blackhole_body .blackhole:after {
     content: '';
     height: calc(100% + 10px);
     width: calc(100% + 10px);
@@ -115,7 +116,7 @@ a:before {
     transform: rotate(45deg);
 }
 
-.ship {
+.blackhole_body .ship {
     height: 150px;
     width: 55px;
     margin-left: 10px;

@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Merriweather+Sans");
-main {
+.birdie_main {
     height: 100vh;
-    width: 100vw;
     background: #fff;
     display: -webkit-box;
     display: flex;
@@ -14,11 +13,11 @@ main {
     align-items: center;
     font-family: "Merriweather Sans", sans-serif;
 }
-main #errorText {
+.birdie_main #errorText {
     font-size: 22px;
     margin: 14px 0;
 }
-main #errorLink {
+.birdie_main #errorLink {
     font-size: 20px;
     padding: 12px;
     border: 1px solid;
@@ -28,11 +27,11 @@ main #errorLink {
     -webkit-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
 }
-main #errorLink:hover, main #errorLink:active {
+.birdie_main #errorLink:hover, .birdie_main #errorLink:active {
     color: #fff;
     background: #000;
 }
-main #g6219 {
+.birdie_main #g6219 {
     -webkit-transform-origin: 85px 4px;
     transform-origin: 85px 4px;
     -webkit-animation: an1 12s 0.5s infinite ease-out;

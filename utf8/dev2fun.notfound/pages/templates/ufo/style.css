@@ -1,17 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Cabin+Sketch");
-html {
-    height: 100%;
-}
 
-body {
-    min-height: 100%;
-}
-
-body {
+.ufo_wrapper  {
     display: flex;
 }
 
-h1 {
+.ufo_wrapper h1 {
     font-family: 'Cabin Sketch', cursive;
     font-size: 3em;
     text-align: center;
@@ -19,11 +12,11 @@ h1 {
     order: 1;
 }
 
-h1 small {
+.ufo_wrapper h1 small {
     display: block;
 }
 
-.site {
+.ufo_wrapper .site {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -40,7 +33,7 @@ h1 small {
     justify-content: center;
 }
 
-.sketch {
+.ufo_wrapper .sketch {
     position: relative;
     height: 400px;
     min-width: 400px;
@@ -49,7 +42,7 @@ h1 small {
     order: 2;
 }
 
-.bee-sketch {
+.ufo_wrapper .bee-sketch {
     height: 100%;
     width: 100%;
     position: absolute;
@@ -57,32 +50,32 @@ h1 small {
     left: 0;
 }
 
-.red {
+.ufo_wrapper .red {
     background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/red-1.png) no-repeat center center;
     opacity: 1;
     animation: red 3s linear infinite, opacityRed 5s linear alternate infinite;
 }
 
-.blue {
+.ufo_wrapper .blue {
     background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/198554/blue-1.png) no-repeat center center;
     opacity: 0;
     animation: blue 3s linear infinite, opacityBlue 5s linear alternate infinite;
 }
 
 @media only screen and (min-width: 780px) {
-    .site {
+    .ufo_wrapper .site {
         flex-direction: row;
         padding: 1em 3em 1em 0em;
     }
 
-    h1 {
+    .ufo_wrapper h1 {
         text-align: right;
         order: 2;
         padding-bottom: 2em;
         padding-left: 2em;
     }
 
-    .sketch {
+    .ufo_wrapper .sketch {
         order: 1;
     }
 }
