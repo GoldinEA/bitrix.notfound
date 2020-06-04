@@ -77,6 +77,7 @@ class Base
             $templates = [];
             foreach (self::$findDirectories as $findDirectory) {
                 $findDirectory = $_SERVER['DOCUMENT_ROOT'].$findDirectory;
+                if(!\is_dir($findDirectory)) continue;
                 $tree = \scandir($findDirectory);
                 if(!$tree) continue;
                 $tree = \array_filter($tree, function($dir){
