@@ -3,7 +3,7 @@
 
 Модуль добавляет поддержку страницы 404 с шаблонами.
 
-[Модуль в Маркетплейс Битрикс](http://marketplace.1c-bitrix.ru/solutions/dev2fun.notfound/#tab-install-link)
+[Модуль-основа в Маркетплейс Битрикс](http://marketplace.1c-bitrix.ru/solutions/dev2fun.notfound/#tab-install-link)
 
 ## Чем полезен модуль
 
